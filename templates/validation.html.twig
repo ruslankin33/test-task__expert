@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ошибка валидации{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <h3>Ошибка валидации</h3>
+            <ul>
+                {% for error in errors %}
+                    <li>{{ error.message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
